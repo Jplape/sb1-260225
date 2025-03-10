@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.calendar-container .fc {
+  @apply font-sans;
+}
+
+.calendar-container .fc-toolbar-title {
+  @apply text-xl font-semibold text-gray-900;
+}
+
+.calendar-container .fc-button {
+  @apply bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+.calendar-container .fc-button-active {
+  @apply bg-blue-500 text-white border-blue-500 hover:bg-blue-600;
+}
+
+.calendar-container .fc-event {
+  @apply cursor-pointer border-none rounded-lg shadow-sm;
+}
+
+.calendar-container .fc-event-main {
+  @apply p-1;
+}
+
+.calendar-container .fc-day-today {
+  @apply bg-blue-50;
+}
+
+.calendar-container .fc-timegrid-slot {
+  @apply h-12;
+}
+
+.calendar-container .fc-timegrid-slot-label {
+  @apply text-sm text-gray-500;
+}
+
+.calendar-container .fc-col-header-cell {
+  @apply py-3 font-semibold text-gray-700;
+}
