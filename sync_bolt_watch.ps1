@@ -15,7 +15,7 @@ function Log($message, $type="INFO") {
 }
 
 # Function to load configuration
-function Load-Config {
+function Get-Config {
     if (-Not (Test-Path $CONFIG_FILE)) {
         Log "Configuration file '$CONFIG_FILE' not found." "ERROR"
         exit 1
@@ -45,13 +45,16 @@ function Compare-Files($file1, $file2) {
 # Function to synchronize files
 function Sync-Files($gitBranch) {
     Log "Scanning for ZIP files..."
-    $foundZip = $false
+    
+    $zipFiles = Get-ChildItem -Path $ZIP_PATTERN
+    if ($zipFiles.Count -eq 0) {
+        Log "No new ZIP files found. Waiting..."
+        return
+    }
 
-    Get-ChildItem -Path $ZIP_PATTERN | ForEach-Object {
-        $foundZip = $true
+    $zipFiles | ForEach-Object {
         $zipFile = $_.FullName
         Log "Processing ZIP file: $zipFile"
-
         try {
             # Clean temporary directory
             if (Test-Path $TEMP_DIR) { Remove-Item $TEMP_DIR -Recurse -Force }
@@ -102,7 +105,7 @@ function Sync-Files($gitBranch) {
             Log "ZIP file moved to $SYNCED_DIR : $zipFile"
         }
         catch {
-            Log "Error processing $zipFile: $_" "ERROR"
+            Log "Error processing $($zipFile): $($_)" "ERROR"
         }
         finally {
             # Cleanup
@@ -110,15 +113,12 @@ function Sync-Files($gitBranch) {
         }
     }
 
-    if (-Not $foundZip) {
-        Log "No new ZIP files found. Waiting..."
-    }
 }
 
 # Main function
 function Main {
     Log "Initializing script..."
-    $config = Load-Config
+    $config = Get-Config
 
     # Ensure required directories exist
     foreach ($dir in @($SYNCED_DIR, $BACKUP_DIR)) {
