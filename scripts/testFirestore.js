@@ -1,8 +1,10 @@
 // 1️⃣ Importer Firebase Admin SDK
-const admin = require("firebase-admin");
+import admin from "firebase-admin";
 
 // 2️⃣ Charger le fichier firebase-admin.json
-const serviceAccount = require("./firebase-admin.json");
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const serviceAccount = require("../firebase-admin.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)  // Authentification avec le compte de service
