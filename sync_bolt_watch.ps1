@@ -128,10 +128,16 @@ function Main {
         }
     }
 
-    # Continuous monitoring loop
-    while ($true) {
-        Sync-Files $config.branch
-        Start-Sleep -Seconds 5
+    # Process files once
+    Sync-Files $config.branch
+    
+    if ($?) {
+        Log "Processing completed successfully"
+        exit 0
+    }
+    else {
+        Log "Processing failed" "ERROR"
+        exit 1
     }
 }
 
