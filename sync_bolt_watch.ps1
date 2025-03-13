@@ -1,3 +1,17 @@
+# Enhanced logging
+$currentProcess = Get-Process -Id $PID
+$parentProcess = Get-Process -Id $currentProcess.Parent.Id
+$logHeader = @"
+========================================
+Process ID: $PID
+Parent Process ID: $($currentProcess.Parent.Id)
+Parent Process Name: $($parentProcess.ProcessName)
+Command Line: $($currentProcess.CommandLine)
+Working Directory: $PWD
+========================================
+"@
+Log $logHeader
+
 # Configuration values
 $CONFIG_FILE = "bolt-sync-config.psd1"
 $ZIP_PATTERN = "project-bolt-*.zip"
