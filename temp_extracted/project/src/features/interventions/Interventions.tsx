@@ -3,15 +3,14 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../../state/store';
 import { Clock, AlertTriangle, CheckCircle, List, Calendar as CalendarIcon } from 'lucide-react';
 import CalendarView from '../calendar/Calendar';
-import NewInterventionModal from './NewInterventionModal';
 
 function Interventions() {
   const interventions = useSelector((state: RootState) => state.interventions.items);
   const [view, setView] = useState<'list' | 'calendar'>('calendar');
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleAddIntervention = () => {
-    setIsModalOpen(true);
+    // TODO: Implement add intervention modal
+    console.log('Add intervention clicked');
   };
 
   return (
@@ -79,11 +78,6 @@ function Interventions() {
           </div>
         </div>
       )}
-
-      <NewInterventionModal 
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-      />
     </div>
   );
 }

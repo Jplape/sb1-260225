@@ -1,213 +1,115 @@
 # dev-specs.md
 
-## 1. Configuration et Préparation (Durée estimée : Week 1)
+## 1. Configuration et Préparation ✅
+- [x] Installer les outils nécessaires : Bolt.new, VS Code, Cline, et DeepSeek
+- [x] Créer un dépôt GitHub public et le connecter à Bolt.new pour la synchronisation automatique
+- [x] Configurer le projet initial avec Bolt.new
+- [x] Configurer les environnements de développement local (Web)
+- [x] Ajouter les dépendances principales :
+  - **Frontend** :
+    - [x] React.js + TypeScript
+    - [x] Tailwind CSS
+    - [x] Redux Toolkit
+    - [x] React Router
+    - [x] Axios
+    - [x] Socket.io Client
+    - [x] Date-fns
+    - [x] FullCalendar
+    - [x] Lucide React
 
-- [ ] Installer les outils nécessaires : Bolt.new, VS Code, Cline, et DeepSeek.
-- [ ] Créer un dépôt GitHub public et le connecter à Bolt.new pour la synchronisation automatique.
-- [ ] Configurer le projet initial avec Bolt.new pour les deux applications (Maintenance Manager Pro et Maintenance Tech Pro).
-- [ ] Configurer les environnements de développement local (Web et Mobile).
-- [ ] Ajouter les dépendances principales :
-  - **Frontend** : React.js, React Native, Tailwind CSS, Material-UI, Redux, React Query, Axios.
-  - **Backend** : Node.js, Express.js, PostgreSQL, Firebase, JWT, bcrypt.
-  - **Tests** : Jest, React Testing Library, Cypress.
+## 2. Développement du Frontend ⏳
 
----
+### 2.1 Structure du Projet ✅
+- [x] Organisation des dossiers
+  - [x] components/
+  - [x] features/
+  - [x] hooks/
+  - [x] services/
+  - [x] state/
 
-## 2. Développement du Frontend (Durée estimée : Weeks 2-4)
-# **Spécifications de Développement - Frontend**
+### 2.2 Composants et Fonctionnalités ⏳
 
-## **1. Configuration et Préparation (Semaine 1)**
-### **1.1 Outils et Dépendances**
-#### **Outils nécessaires**
-- [ ] **Bolt.new** : Génération du projet et gestion des composants.
-- [ ] **VS Code** : IDE avec extensions TypeScript, React et linting.
-- [ ] **Cline** : Outil IA pour l’optimisation du développement.
-- [ ] **DeepSeek** : Intégration IA pour la génération de rapports.
+#### Layout et Navigation ✅
+- [x] Sidebar avec navigation
+- [x] Header avec notifications
+- [x] Layout responsive
 
-#### **Dépendances principales**
-##### **Frontend Web**
-- [ ] **Framework** : React.js + TypeScript.
-- [ ] **UI** : Tailwind CSS + Material-UI.
-- [ ] **Navigation** : React Router.
-- [ ] **Gestion d’état** : Redux (global state), React Query (server state), Zustand/Recoil (state local).
-- [ ] **Requêtes API** : Axios.
+#### Dashboard ✅
+- [x] Vue d'ensemble des statistiques
+- [x] Calendrier hebdomadaire
+- [x] Liste des techniciens actifs
+- [x] Messages récents
 
-##### **Frontend Mobile**
-- [ ] **Framework** : React Native + TypeScript.
-- [ ] **Navigation** : React Navigation (bottom tabs, drawer).
-- [ ] **Stockage local** : AsyncStorage.
+#### Gestion des Interventions ✅
+- [x] Vue calendrier avec FullCalendar
+- [x] Vue liste des interventions
+- [x] Création d'interventions
+- [x] Gestion des priorités
+- [x] Synchronisation Google Calendar
 
----
+#### Gestion des Équipements ✅
+- [x] Liste des équipements
+- [x] État des équipements
+- [x] Historique de maintenance
 
-## **2. Structuration et Développement du Frontend (Semaines 2-4)**
-### **2.1 Organisation des fichiers**
-```bash
-src/
-├── components/      # Composants UI réutilisables (boutons, modales, inputs)
-├── hooks/           # Hooks personnalisés pour gérer l’état et les appels API
-├── utils/           # Fonctions utilitaires (formatage, validation)
-├── pages/           # Pages principales (dashboard, interventions, équipements)
-├── services/        # Gestion des appels API (Axios, Fetch)
-├── navigation/      # Routes et gestion de la navigation Web et Mobile
-├── chatbot/         # Composant de chatbot pour l’assistance aux rapports
-└── App.tsx          # Point d’entrée principal
-```
+#### Rapports ✅
+- [x] Liste des rapports
+- [x] Validation des rapports
+- [x] Génération de rapports
+- [x] Formulaire de rapport avec signature
 
-### **2.2 UI et Navigation**
-- **UI Library** : Material-UI (MUI) pour les composants préconstruits, Tailwind CSS pour le styling rapide.
-- **Gestion de la navigation** :
-  - **Web** : React Router avec Breadcrumbs.
-  - **Mobile** : React Navigation (bottom tabs, menu latéral).
+#### Paramètres ✅
+- [x] Notifications
+- [x] Application mobile
+- [x] Gestion des données
+- [x] Sécurité
+- [x] Gestion de l'équipe
 
-### **2.3 Composants Clés**
-#### **Tableau de Bord Administrateur**
-- [ ] Statistiques interactives avec Chart.js.
-- [ ] Vue en temps réel des interventions et équipements.
-- [ ] Accès rapide aux tâches prioritaires.
+### 2.3 État et Gestion des Données ✅
+- [x] Configuration Redux Toolkit
+- [x] Slices pour chaque fonctionnalité
+  - [x] Interventions
+  - [x] Équipements
+  - [x] Rapports
+  - [x] Notifications
 
-#### **Gestion des Interventions**
-- [ ] Calendrier des interventions avec FullCalendar.
-- [ ] Formulaire de création et modification.
-- [ ] Filtres avancés (statut, priorité, technicien).
-- [ ] Intégration avec Google Calendar API.
+### 2.4 Services et Intégrations ✅
+- [x] Configuration Axios
+- [x] Service d'authentification
+- [x] Service de notifications
+- [x] Service WebSocket
+- [x] Service Calendar
 
-#### **Gestion des Équipements**
-- [ ] Consultation des équipements enregistrés.
-- [ ] Historique des interventions.
-- [ ] Alertes pour maintenances préventives.
+## 3. Base de Données et Backend ⏳
+- [ ] Configuration Supabase
+- [ ] Schéma de base de données
+- [ ] Migration des données
+- [ ] API RESTful
 
-#### **Interface Mobile des Techniciens**
-- [ ] Consultation du planning des interventions.
-- [ ] Mise à jour des statuts (En attente, En cours, Terminée).
-- [ ] Ajout de photos et commentaires via l’application mobile.
-- [ ] Génération automatique des rapports avec DeepSeek.
+## 4. Authentification et Sécurité ⏳
+- [ ] Authentification avec Supabase
+- [ ] Gestion des rôles
+- [ ] Politiques de sécurité
+- [ ] Protection des routes
 
-#### **Chatbot d’Assistance à la Rédaction des Rapports**
-- [ ] Création d’un composant **ChatbotAssistant** dans `src/components/ChatbotAssistant.tsx`.
-- [ ] Intégration d’une **fenêtre de chat** interactive pour aider à la rédaction.
-- [ ] Connexion au backend via une **API de chatbot**.
-- [ ] Ajout d’un **bouton d’accès rapide** au chatbot depuis la page des interventions.
-- [ ] Utilisation d’un **state management** pour stocker les suggestions du chatbot.
-- [ ] Synchronisation avec **AsyncStorage (mobile)** pour conserver les brouillons hors ligne.
-- [ ] Possibilité d’**auto-complétion du rapport** basée sur les suggestions du chatbot.
-- [ ] Ajout d’une option **transcription vocale → texte** via **Speech-to-Text API**.
+## 5. Tests et Optimisation 🔄
+- [ ] Tests unitaires
+- [ ] Tests d'intégration
+- [ ] Optimisation des performances
+- [ ] Gestion des erreurs
 
----
+## 6. Déploiement ⏳
+- [ ] Configuration Netlify
+- [ ] Variables d'environnement
+- [ ] CI/CD
+- [ ] Monitoring
 
-## **3. Gestion d’État et Synchronisation des Données**
-- [ ] **Redux Toolkit** : Gestion centralisée des utilisateurs, équipements et interventions.
-- [ ] **Zustand/Recoil** : Gestion des états locaux légers.
-- [ ] **React Query** : Gestion avancée des données API (caching, synchronisation).
-- [ ] **AsyncStorage (Mobile)** : Sauvegarde locale des données hors ligne.
+## 7. Documentation 🔄
+- [ ] Documentation technique
+- [ ] Guide d'utilisation
+- [ ] API documentation
 
----
-
-## **4. Tests et Optimisation (Semaines 5-6)**
-### **4.1 Tests**
-- [ ] **Unitaires** : Jest et React Testing Library.
-- [ ] **D’intégration** : Cypress (Web) et Detox (Mobile).
-
-### **4.2 Optimisation des Performances**
-- [ ] **Lazy Loading** : Chargement différé des modules lourds.
-- [ ] **Code Splitting** : Réduction de la taille des fichiers.
-- [ ] **Compression et Minification** : Webpack pour optimiser les fichiers.
-
----
-
-## **5. Déploiement et CI/CD (Semaine 8)**
-- [ ] **Déploiement du frontend Web** :
-  - **Netlify ou Vercel**.
-  - **Domaine personnalisé avec SSL**.
-- [ ] **CI/CD avec GitHub Actions** :
-  - Tests automatisés avant chaque merge en production.
-  - Déploiement continu après validation.
-
----
-
-## **6. Validation Finale et Livraison (Semaines 9-10)**
-- [ ] **Tests End-to-End** pour valider les flux utilisateur (**Cypress, Detox**).
-- [ ] **Validation de la synchronisation** des paramètres techniciens entre Web et Mobile.
-- [ ] **Livraison et documentation** :
-  - README.md pour développeurs.
-  - Documentation API avec Swagger.
-
-## 3. Développement du Backend (Durée estimée : Weeks 5-6)
-
-### 3.1 Configuration Backend
-
-- [ ] Configurer Node.js avec Express.js pour les API RESTful.
-- [ ] Connecter PostgreSQL et Cloud Firestore (données critiques et temps réel).
-- [ ] Configurer Firebase Admin pour les notifications push et la synchronisation.
-
-### 3.2 Endpoints API
-
-- [ ] Implémenter les endpoints principaux :
-  - **Authentification** : OAuth 2.0 avec JWT.
-  - **Interventions** : CRUD complet (GET, POST, PUT, DELETE).
-  - **Équipements** : Gestion et historique.
-  - **Rapports** : Génération et soumission.
-  - **Notifications** : Envoi de push via Firebase.
-  - **Paramètres Techniciens** : CRUD des paramètres synchronisés avec l’application mobile.
-- [ ] Intégrer Google Calendar API pour la planification des interventions.
-- [ ] Documenter les APIs avec Swagger.
-
-### 3.3 Sécurité
-
-- [ ] Implémenter le hachage des mots de passe avec bcrypt.
-- [ ] Configurer le chiffrement des communications avec SSL/TLS.
-- [ ] Ajouter l’authentification à deux facteurs (2FA) pour les administrateurs.
-
-### 3.4 Tests Backend
-
-- [ ] Implémenter les tests unitaires avec Jest et Supertest.
-- [ ] Effectuer des tests d’intégration pour les endpoints critiques.
-
----
-
-## 4. Gestion des Données et Synchronisation (Durée estimée : Week 7)
-
-### 4.1 Schéma de Base de Données
-
-- [ ] Configurer les collections Firestore (Utilisateurs, Interventions, Équipements, Rapports, Notifications, Paramètres).
-- [ ] Configurer les tables PostgreSQL pour les données critiques.
-- [ ] Implémenter des index pour optimiser les requêtes fréquentes, comme sur `InterventionID` et `AssignedTechnicianID`.
-
-### 4.2 Synchronisation Temps Réel
-
-- [ ] Implémenter la synchronisation entre Firestore et les applications frontend.
-- [ ] Configurer Firebase Cloud Messaging (FCM) pour notifier les applications mobiles des mises à jour des paramètres.
-- [ ] Tester les conflits de données et leur résolution.
-
----
-
-## 5. Déploiement et CI/CD (Durée estimée : Week 8)
-
-- [ ] Déployer le frontend web sur Netlify (ou Vercel).
-- [ ] Déployer le backend sur AWS ou Heroku.
-- [ ] Configurer CI/CD avec GitHub Actions :
-  - Tests automatisés.
-  - Déploiement continu après validation.
-- [ ] Configurer un domaine personnalisé avec certificat SSL.
-
----
-
-## 6. Tests et Validation Finale (Durée estimée : Week 9)
-
-- [ ] Effectuer des tests end-to-end pour valider les flux utilisateur (Cypress, Detox).
-- [ ] Effectuer des tests manuels pour valider les cas limites (mode hors ligne, synchronisation).
-- [ ] Tester les interactions chatbot pour l’assistance à la création de rapports.
-- [ ] Valider la synchronisation des paramètres techniciens entre le web et le mobile.
-- [ ] Analyser la performance des applications avec des outils comme Lighthouse.
-
----
-
-## 7. Livraison et Documentation (Durée estimée : Week 10)
-
-- [ ] Compiler et livrer toutes les versions finales (web, mobile, backend).
-- [ ] Fournir une documentation complète :
-  - README.md pour les développeurs.
-  - Documentation API (Swagger).
-  - Flux utilisateur et diagrammes d’architecture.
-  - Paramètres configurables depuis Maintenance Manager Pro vers Maintenance Tech Pro.
-  - Journalisation des modifications des paramètres dans Firestore pour audit.
-- [ ] Organiser une session de formation pour les utilisateurs finaux.
+Légende :
+✅ Terminé
+⏳ En cours
+🔄 À faire
