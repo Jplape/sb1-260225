@@ -3,7 +3,6 @@ import interventionsReducer from './interventionsSlice';
 import equipmentReducer from './equipmentSlice';
 import reportsReducer from './reportsSlice';
 import notificationsReducer from './notificationsSlice';
-import chatbotReducer from './chatbotSlice';
 
 export const store = configureStore({
   reducer: {
@@ -11,7 +10,6 @@ export const store = configureStore({
     equipment: equipmentReducer,
     reports: reportsReducer,
     notifications: notificationsReducer,
-    chatbot: chatbotReducer,
   },
 });
 

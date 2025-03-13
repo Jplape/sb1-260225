@@ -22,7 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-firebase-admin.json
-firebase.json
-sync-config.ini

@@ -1,0 +1,115 @@
+# dev-specs.md
+
+## 1. Configuration et Préparation ✅
+- [x] Installer les outils nécessaires : Bolt.new, VS Code, Cline, et DeepSeek
+- [x] Créer un dépôt GitHub public et le connecter à Bolt.new pour la synchronisation automatique
+- [x] Configurer le projet initial avec Bolt.new
+- [x] Configurer les environnements de développement local (Web)
+- [x] Ajouter les dépendances principales :
+  - **Frontend** :
+    - [x] React.js + TypeScript
+    - [x] Tailwind CSS
+    - [x] Redux Toolkit
+    - [x] React Router
+    - [x] Axios
+    - [x] Socket.io Client
+    - [x] Date-fns
+    - [x] FullCalendar
+    - [x] Lucide React
+
+## 2. Développement du Frontend ⏳
+
+### 2.1 Structure du Projet ✅
+- [x] Organisation des dossiers
+  - [x] components/
+  - [x] features/
+  - [x] hooks/
+  - [x] services/
+  - [x] state/
+
+### 2.2 Composants et Fonctionnalités ⏳
+
+#### Layout et Navigation ✅
+- [x] Sidebar avec navigation
+- [x] Header avec notifications
+- [x] Layout responsive
+
+#### Dashboard ✅
+- [x] Vue d'ensemble des statistiques
+- [x] Calendrier hebdomadaire
+- [x] Liste des techniciens actifs
+- [x] Messages récents
+
+#### Gestion des Interventions ✅
+- [x] Vue calendrier avec FullCalendar
+- [x] Vue liste des interventions
+- [x] Création d'interventions
+- [x] Gestion des priorités
+- [x] Synchronisation Google Calendar
+
+#### Gestion des Équipements ✅
+- [x] Liste des équipements
+- [x] État des équipements
+- [x] Historique de maintenance
+
+#### Rapports ✅
+- [x] Liste des rapports
+- [x] Validation des rapports
+- [x] Génération de rapports
+- [x] Formulaire de rapport avec signature
+
+#### Paramètres ✅
+- [x] Notifications
+- [x] Application mobile
+- [x] Gestion des données
+- [x] Sécurité
+- [x] Gestion de l'équipe
+
+### 2.3 État et Gestion des Données ✅
+- [x] Configuration Redux Toolkit
+- [x] Slices pour chaque fonctionnalité
+  - [x] Interventions
+  - [x] Équipements
+  - [x] Rapports
+  - [x] Notifications
+
+### 2.4 Services et Intégrations ✅
+- [x] Configuration Axios
+- [x] Service d'authentification
+- [x] Service de notifications
+- [x] Service WebSocket
+- [x] Service Calendar
+
+## 3. Base de Données et Backend ⏳
+- [ ] Configuration Supabase
+- [ ] Schéma de base de données
+- [ ] Migration des données
+- [ ] API RESTful
+
+## 4. Authentification et Sécurité ⏳
+- [ ] Authentification avec Supabase
+- [ ] Gestion des rôles
+- [ ] Politiques de sécurité
+- [ ] Protection des routes
+
+## 5. Tests et Optimisation 🔄
+- [ ] Tests unitaires
+- [ ] Tests d'intégration
+- [ ] Optimisation des performances
+- [ ] Gestion des erreurs
+
+## 6. Déploiement ⏳
+- [ ] Configuration Netlify
+- [ ] Variables d'environnement
+- [ ] CI/CD
+- [ ] Monitoring
+
+## 7. Documentation 🔄
+- [ ] Documentation technique
+- [ ] Guide d'utilisation
+- [ ] API documentation
+
+Légende :
+✅ Terminé
+⏳ En cours
+🔄 À faire

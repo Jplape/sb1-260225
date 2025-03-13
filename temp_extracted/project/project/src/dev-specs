@@ -2,9 +2,9 @@
 
 ## 1. Configuration et Préparation (Durée estimée : Week 1)
 
-- [ ] Installer les outils nécessaires : Bolt.new, VS Code, Cline, et DeepSeek.
-- [ ] Créer un dépôt GitHub public et le connecter à Bolt.new pour la synchronisation automatique.
-- [ ] Configurer le projet initial avec Bolt.new pour les deux applications (Maintenance Manager Pro et Maintenance Tech Pro).
+- [ x] Installer les outils nécessaires : Bolt.new, VS Code, Cline, et DeepSeek.
+- [ x] Créer un dépôt GitHub public et le connecter à Bolt.new pour la synchronisation automatique.
+- [ x] Configurer le projet initial avec Bolt.new pour les deux applications (Maintenance Manager Pro et Maintenance Tech Pro).
 - [ ] Configurer les environnements de développement local (Web et Mobile).
 - [ ] Ajouter les dépendances principales :
   - **Frontend** : React.js, React Native, Tailwind CSS, Material-UI, Redux, React Query, Axios.
@@ -19,10 +19,10 @@
 ## **1. Configuration et Préparation (Semaine 1)**
 ### **1.1 Outils et Dépendances**
 #### **Outils nécessaires**
-- [ ] **Bolt.new** : Génération du projet et gestion des composants.
-- [ ] **VS Code** : IDE avec extensions TypeScript, React et linting.
-- [ ] **Cline** : Outil IA pour l’optimisation du développement.
-- [ ] **DeepSeek** : Intégration IA pour la génération de rapports.
+- [ x] **Bolt.new** : Génération du projet et gestion des composants.
+- [ x] **VS Code** : IDE avec extensions TypeScript, React et linting.
+- [ x] **Cline** : Outil IA pour l’optimisation du développement.
+- [ x] **DeepSeek** : Intégration IA pour la génération de rapports.
 
 #### **Dépendances principales**
 ##### **Frontend Web**
