@@ -1,0 +1,21 @@
+name: GitHub Issues ➡️ Firestore
+
+on:
+  issues:
+    types: [opened, closed, reopened, edited]
+
+jobs:
+  update_firestore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Installer firebase-admin
+        run: npm install firebase-admin
+      - name: Mettre à jour Firestore
+        run: |
+          node scripts/updateFirestore.js ${{ github.event.issue.number }} "${{ github.event.issue.title }}" "${{ github.event.issue.state }}"
+        env:
+          FIREBASE_CREDENTIALS: ${{ secrets.FIREBASE_CREDENTIALS }}
