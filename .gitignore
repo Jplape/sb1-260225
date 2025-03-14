@@ -26,3 +26,4 @@ dist-ssr
 firebase-admin.json
 firebase.json
 sync-config.ini
+.qodo
